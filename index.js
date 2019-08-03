@@ -96,12 +96,11 @@ function Game(opts) {
   this.pendingChunks = []
 
   this.materials = texture({
-    game: this,
-    texturePath: opts.texturePath || './textures/',
-    materialType: opts.materialType || THREE.MeshLambertMaterial,
-    materialParams: opts.materialParams || {},
-    materialFlatColor: opts.materialFlatColor === true
-  })
+      game: this,
+      texturePath: opts.texturePath || './textures/',
+      materialType: opts.materialType || THREE.MeshLambertMaterial,
+      materialParams: opts.materialParams || {}
+    });
 
   this.materialNames = opts.materials || [['grass', 'dirt', 'grass_dirt'], 'brick', 'dirt']
   
